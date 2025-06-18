@@ -4,19 +4,19 @@
     <title>Salesforce Test Page</title>
   </head>
   <body>
-    <h1>Testing Salesforce Web Messaging</h1>
+    <h1>Testing Salesforce Web Messaging Functionality</h1>
 
     <div id="embedded-messaging-container"></div>
 
-    <script type="text/javascript">
+    <script type='text/javascript'>
       function initEmbeddedMessaging() {
         try {
           embeddedservice_bootstrap.settings.language = 'en_US';
 
           embeddedservice_bootstrap.init(
-            '00DgL000005DkAG', // Your Salesforce Org ID
-            'ConstructConnect_WebMessaging2', // Your Embedded Service Deployment Name
-            'https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248', // Your Site Endpoint
+            '00DgL000005DkAG',
+            'ConstructConnect_WebMessaging2',
+            'https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248',
             {
               scrt2URL: 'https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com'
             }
@@ -28,9 +28,9 @@
     </script>
 
     <script
-      type="text/javascript"
-      src="https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248/assets/js/bootstrap.min.js"
-      onload="initEmbeddedMessaging()">
+      type='text/javascript'
+      src='https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248/assets/js/bootstrap.min.js'
+      onload='initEmbeddedMessaging()'>
     </script>
   </body>
 </html>
