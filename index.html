@@ -9,15 +9,30 @@
     <div id="embedded-messaging-container"></div>
 
     <script type="text/javascript">
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com/embeddedservice/asyncclient/bootstrap.min.js";
-        // CORRECTED LINE BELOW:
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'embedded-messaging-script'));
+      function initEmbeddedMessaging() {
+        try {
+          embeddedservice_bootstrap.settings.language = 'en_US';
+
+          embeddedservice_bootstrap.init(
+            '00DgL000005DkAG', // Your Salesforce Org ID
+            'ConstructConnect_WebMessaging2', // Your Embedded Service Deployment Name
+            'https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248', // Your Site Endpoint
+            {
+              scrt2URL: 'https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com'
+            }
+          );
+        } catch (err) {
+          console.error('Error loading Embedded Messaging: ', err);
+        }
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://orgfarm-a9da0ad1f9-dev-ed.develop.my.site.com/ESWConstructConnectWebMe1750255310248/assets/js/bootstrap.min.js"
+      onload="initEmbeddedMessaging()">
     </script>
   </body>
 </html>
+
 
