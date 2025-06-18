@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Salesforce Test Page</title></head>
+  <head>
+    <title>Salesforce Test Page</title>
+  </head>
   <body>
     <h1>Testing Salesforce Web Messaging</h1>
-    {
-  "OrganizationId": "00DgL000005DkAG",
-  "DeveloperName": "ConstructConnect_WebMessaging",
-  "Url": "https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com"
-}
+
+    <script>
+      const webMessagingConfig = {
+        OrganizationId: "00DgL000005DkAG",
+        DeveloperName: "ConstructConnect_WebMessaging",
+        Url: "https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com"
+      };
+
+      // Example: Log the config to the console
+      console.log("Salesforce Web Messaging Config:", webMessagingConfig);
+
+      // You would typically initialize Salesforce Web Messaging here
+      // e.g., embedded_svc.init(...);
+    </script>
   </body>
 </html>
+
