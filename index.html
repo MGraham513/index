@@ -5,20 +5,17 @@
   </head>
   <body>
     <h1>Testing Salesforce Web Messaging</h1>
+      <script type="text/javascript">
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://orgfarm-a9da0ad1f9-dev-ed.de.my.salesforce-scrt.com/embeddedservice/asyncclient/bootstrap.min.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'embedded-messaging-script'));
+      </script>
 
-    <script>
-      const webMessagingConfig = {
-        OrganizationId: "00DgL000005DkAG",
-        DeveloperName: "ConstructConnect_WebMessaging",
-        Url: "https://orgfarm-a9da0ad1f9-dev-ed.develop.my.salesforce-scrt.com"
-      };
 
-      // Example: Log the config to the console
-      console.log("Salesforce Web Messaging Config:", webMessagingConfig);
-
-      // You would typically initialize Salesforce Web Messaging here
-      // e.g., embedded_svc.init(...);
-    </script>
   </body>
 </html>
 
